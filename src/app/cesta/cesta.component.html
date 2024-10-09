@@ -1,1 +1,25 @@
-<p>cesta works!</p>
+<main>
+    <div class="cesta-box">
+        <h1>Cesta de Compras</h1>
+        <h2><b>{{mensagem}}</b></h2>
+
+        <table>
+            <div class="tabela">
+            <tr><td>Camisa</td><td>Cod.</td><td>Nome</td><td>Qtd</td><td>Valor (R$)</td><td>Total por item (R$)</td></tr>
+
+            <tr *ngFor="let x of cesta.itens">
+                <td><img src="assets/{{x.codigo}}.png"></td>
+                <td>{{x.codigo}}</td>
+                <td>{{x.produto.nome}}</td>
+                <td>{{x.quantidade}}</td>
+                <td>{{x.produto.valor | number: '1.2-2'}}</td>
+                <td>{{x.valor | number: '1.2-2'}}</td>
+                <td><button (click)="removerItem(x)">x</button></td>
+            </tr>
+            <tr><td colspan="4">Total</td><td colspan="3">R$ {{cesta.total | number: '1.2-2'}}</td></tr>
+        </div>
+        </table>
+        <button (click)="limparCesta()">Limpar</button>
+        <button>Finalizar Compra</button>
+    </div>
+</main>

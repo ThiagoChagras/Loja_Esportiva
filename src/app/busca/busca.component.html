@@ -1,0 +1,24 @@
+
+<h4>{{mensagem}}</h4>
+
+<input type="text" [(ngModel)]="filtro" placeholder="Insira sua busca"><br>
+
+
+<h3 class="produtos" *ngIf="lista.length<=0">
+não foram encontrados produtos em sua pesquisa</h3>
+
+
+<main>
+<div *ngFor="let item of lista">
+    <div *ngIf="item.descritivo.toLowerCase().indexOf(filtro.toLowerCase())>=0">
+        <div class="produto">
+            <h4>{{item.nome}}</h4>
+            <img src="assets/{{item.codigo}}.png"width="150px">
+            <p class="descritivo">{{item.descritivo}}</p>
+            <p class="valor">R$ {{item.valor | number: '1.2-2'}}</p>
+            <button (click)="verDetalhe(item)">Ver Mais</button>
+            <button *ngIf="item.quantidade>0" (click)="adicionarItem(item)">Comprar</button>
+        </div>
+    </div>
+</div>
+</main>

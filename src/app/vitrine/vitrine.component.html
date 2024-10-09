@@ -1,1 +1,17 @@
-<p>vitrine works!</p>
+<main>
+  <div *ngFor="let item of lista" class="produto">
+      <div class="prod">
+          <a (click)="abrirDetalhe(item)">
+              <img src="assets/{{item.codigo}}.png" alt="{{item.nome}}">
+              <p class="nome">{{item.nome}}</p>
+              <p class="descritivo">{{item.descritivo}}</p>
+              <p class="valor">R${{item.valor | number: '1.2-2'}}</p>
+              <button (click)="verDetalhe(item)">Ver Mais</button>
+              <button *ngIf="item.quantidade>0" (click)="adicionarItem(item)">Comprar</button>
+          </a>
+      </div>
+  </div>
+</main>
+
+
+

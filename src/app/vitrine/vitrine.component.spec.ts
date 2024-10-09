@@ -11,7 +11,7 @@ describe('VitrineComponent', () => {
       imports: [VitrineComponent]
     })
     .compileComponents();
-
+    
     fixture = TestBed.createComponent(VitrineComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
