@@ -2,7 +2,7 @@
   <div *ngFor="let item of lista" class="produto">
       <div class="prod">
           <a (click)="abrirDetalhe(item)">
-              <img src="assets/{{item.codigo}}.png" alt="{{item.nome}}">
+              <img src="./{{item.codigo}}.png" alt="{{item.nome}}">
               <p class="nome">{{item.nome}}</p>
               <p class="descritivo">{{item.descritivo}}</p>
               <p class="valor">R${{item.valor | number: '1.2-2'}}</p>

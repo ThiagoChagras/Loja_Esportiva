@@ -13,7 +13,7 @@ não foram encontrados produtos em sua pesquisa</h3>
     <div *ngIf="item.descritivo.toLowerCase().indexOf(filtro.toLowerCase())>=0">
         <div class="produto">
             <h4>{{item.nome}}</h4>
-            <img src="assets/{{item.codigo}}.png"width="150px">
+            <img src="./{{item.codigo}}.png"width="150px">
             <p class="descritivo">{{item.descritivo}}</p>
             <p class="valor">R$ {{item.valor | number: '1.2-2'}}</p>
             <button (click)="verDetalhe(item)">Ver Mais</button>

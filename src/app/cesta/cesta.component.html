@@ -8,7 +8,7 @@
             <tr><td>Camisa</td><td>Cod.</td><td>Nome</td><td>Qtd</td><td>Valor (R$)</td><td>Total por item (R$)</td></tr>
 
             <tr *ngFor="let x of cesta.itens">
-                <td><img src="assets/{{x.codigo}}.png"></td>
+                <td><img src="./{{x.codigo}}.png"></td>
                 <td>{{x.codigo}}</td>
                 <td>{{x.produto.nome}}</td>
                 <td>{{x.quantidade}}</td>

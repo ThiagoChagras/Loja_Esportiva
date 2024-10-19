@@ -5,7 +5,7 @@ body, p, h1, h2, input, textarea {
 }
 
 body {
-    background: url('assets/bg.webp');
+    background: url('bg.webp');
     background-size: cover; /* Cobre toda a tela */
     background-position: center;
     min-height: 100vh;
@@ -53,7 +53,7 @@ input[type="text"] {
     position: relative;
     display: inline-block;
   }
-  
+
   .dropdown-content {
     display: none;
     position: absolute;
@@ -66,7 +66,7 @@ input[type="text"] {
     padding: 0;
     border-radius: 8px; /* Bordas arredondadas */
   }
-  
+
   .dropdown-content a {
     color: #FFD700; /* Dourado para destacar */
     padding: 10px 20px; /* Mais espaçamento nos links */
@@ -77,19 +77,19 @@ input[type="text"] {
     transition: background-color 0.3s ease;
     border-radius: 5px; /* Bordas suaves nos links */
   }
-  
+
   .dropdown-content a:hover {
     background-color: rgba(255, 255, 255, 0.1); /* Efeito de hover sutil com fundo claro */
   }
-  
+
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  
+
   .dropdown:hover #acount {
     color: #FFD700;
   }
-  
+
 
 .menu {
     background-color: rgba(0, 0, 0, 0.8);
